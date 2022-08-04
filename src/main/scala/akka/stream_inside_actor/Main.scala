@@ -1,14 +1,22 @@
+package akka.stream_inside_actor_example
+
 import akka.NotUsed
-import akka.actor.typed.scaladsl.{ActorContext, Behaviors}
 import akka.actor.typed.{ActorRef, Behavior}
+import akka.actor.typed.scaladsl.{ActorContext, Behaviors}
 import akka.stream.Materializer
 import akka.stream.scaladsl.{Flow, Sink, Source}
 
 import scala.concurrent.ExecutionContext
 import scala.util.{Failure, Success}
 
+object Main {
+  def main(args: Array[String]): Unit = {
 
-trait AnotherObjectOne {
+  }
+}
+
+
+object AnotherObjectOne {
 
   trait GeneralMessage
   case class RequestFirstNumber(replyTo: ActorRef[Int]) extends GeneralMessage
@@ -61,6 +69,5 @@ trait AnotherObjectOne {
         replyTo ! result
         Behaviors.same
     }
-}
 
-object AnotherObjectOne extends AnotherObjectOne
+}

@@ -1,0 +1,3 @@
+package akka_typed_projection
+
+trait MySerializer

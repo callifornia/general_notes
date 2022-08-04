@@ -1,0 +1,17 @@
+O (big 0): In academia, big O describes an upper bound on the time.
+           An algorithm that prints all the values in an array could be described as O(N),
+           but it could also be described as O(N2), O(N3) ... therefore they are upper
+           bounds on the runtime.
+           X <= 1, 000 or X <= 1,000,000. It's technically true
+
+`0` (big omega): In academia, `0` is the equivalent concept but for lower bound.
+               Printing the values in an array is O(N) as well as O(log N) and 0(1).
+               After all, you know that it won't be faster than those runtimes.
+
+`E` (big theta): In academia, `E` means both O and `0`. That is, an algorithm is E(N) if it is both O(N) and
+                 `0`( N). 0 gives a tight bound on runtime.
+
+
+
+
+

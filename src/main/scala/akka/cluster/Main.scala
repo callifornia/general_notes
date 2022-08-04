@@ -1,4 +1,4 @@
-package akka_cluster
+package akka.akka_cluster
 
 import akka.actor.typed.ActorSystem
 import akka.actor.typed.scaladsl.Behaviors
