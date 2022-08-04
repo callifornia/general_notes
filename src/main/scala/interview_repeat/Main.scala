@@ -1,17 +1,13 @@
 package interview_repeat
-import akka.actor.typed.scaladsl.Behaviors
-import akka.actor.typed.Behavior
-import akka.util.Timeout
-import akka.persistence.typed.PersistenceId
-import scala.concurrent.duration.DurationInt
-import akka.actor.typed.ActorSystem
-import akka.actor.typed.ActorRef
-import akka.persistence.typed.scaladsl.Effect
-import akka.cluster.sharding.typed.scaladsl.EntityTypeKey
-import akka.actor.typed.scaladsl.AskPattern._
-import akka.actor.typed.receptionist.Receptionist.{Find, Listing, Register}
+
+import akka.actor.typed._
+import akka.actor.typed.receptionist.Receptionist._
 import akka.actor.typed.receptionist.ServiceKey
-import akka.persistence.typed.scaladsl.EventSourcedBehavior
+import akka.actor.typed.scaladsl.AskPattern._
+import akka.actor.typed.scaladsl.Behaviors
+import akka.util.Timeout
+
+import scala.concurrent.duration.DurationInt
 
 
 object Main {
@@ -300,13 +296,9 @@ object toJsonWrapper {
 * */
 
   case class Kleisli[F[_], In, Out](run: In => F[Out]) {
-    import cats.FlatMap
-    import cats.implicits._
     // Kleisli[F[_], In, Out] current
     def andThen[Out2](k: Kleisli[F, Out, Out2])(implicit f: FlatMap[F]): Kleisli[F, In, Out2] =
       Kleisli[F, In, Out2](in => run.apply(in).flatMap(out => k.run(out)))
-
-    import cats.Functor
     // also we can do something like this where we put simple function: A => B
     def map[Out2](k: Out => Out2)(implicit f: Functor[F]): Kleisli[F, In, Out2] =
       Kleisli[F, In, Out2](in => run(in).map(out => k(out)))

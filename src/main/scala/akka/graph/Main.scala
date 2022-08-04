@@ -1,4 +1,4 @@
-package akka.graph_examples
+package akka.graph
 
 import akka.{Done, NotUsed}
 import akka.actor.typed.{ActorSystem, Behavior}

@@ -1,4 +1,4 @@
-package custom_implementation_monad
+package custom_implementation.monad
 
 object Main {
   trait CMonad[+A] {

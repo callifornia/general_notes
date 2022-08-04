@@ -1,4 +1,5 @@
-package akka_typed_projection
+package akka.typed_projection
+
 import akka.actor.typed.ActorSystem
 import akka.actor.typed.scaladsl.Behaviors
 import akka.persistence.cassandra.query.scaladsl.CassandraReadJournal

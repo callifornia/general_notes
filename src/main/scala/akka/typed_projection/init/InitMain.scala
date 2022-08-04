@@ -1,4 +1,4 @@
-package akka_typed_projection.init
+package akka.typed_projection.init
 
 import akka.actor.typed.{ActorSystem, Behavior}
 import akka.actor.typed.scaladsl.Behaviors

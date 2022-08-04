@@ -1,4 +1,4 @@
-package akka.worker_example
+package akka.worker
 
 import akka.actor.typed.scaladsl.Behaviors
 import akka.actor.typed.{ActorRef, ActorSystem, Behavior}

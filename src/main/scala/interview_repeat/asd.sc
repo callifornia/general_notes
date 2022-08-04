@@ -1,5 +1,4 @@
-import cats.FlatMap
-import cats.implicits._
+
 /*
 *
 * val a = String => Option[Int]

@@ -1,4 +1,5 @@
-package actor_typed_signals
+package akka.actor_typed_signals
+
 import akka.actor.typed.ActorSystem
 import akka.actor.typed.scaladsl.Behaviors
 import akka.actor.typed.ActorRef

@@ -1,4 +1,4 @@
-package akka_typed_projection
+package akka.typed_projection
 
 import java.time.Instant
 

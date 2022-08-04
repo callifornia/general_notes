@@ -1,4 +1,4 @@
-package type_classes
+package cats.type_classes
 
 object Main {
   case class ScoredPoint(amount: Amount)

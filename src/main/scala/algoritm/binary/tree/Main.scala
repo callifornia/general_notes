@@ -1,6 +1,5 @@
 package algoritm.binary.tree
 
-
 object Main {
   sealed trait BinaryTree[+A] {
     def :+[B >: A](value: B): BinaryTree[B]

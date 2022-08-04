@@ -1,4 +1,4 @@
-package functor
+package cats.functor
 
 object Main {
 

@@ -1,4 +1,5 @@
-package actor_typed_pipe_to
+package akka.actor_typed_pipe_to
+
 import akka.actor.typed.Behavior
 import akka.actor.typed.scaladsl.Behaviors
 import scala.concurrent.Future

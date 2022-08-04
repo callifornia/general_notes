@@ -1,4 +1,4 @@
-package akka_typed_projection
+package akka.typed_projection
 
 import akka.Done
 import akka.stream.alpakka.cassandra.scaladsl.CassandraSession

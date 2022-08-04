@@ -1,4 +1,4 @@
-package akka_actor_typed_stash_msg_adaptor_receptionist
+package akka.actor_typed_stash_adaptor_receptionist
 
 import akka.actor.typed.receptionist.Receptionist.{Find, Listing, Register}
 import akka.actor.typed.receptionist.ServiceKey

@@ -1,4 +1,4 @@
-package akka.stream_inside_actor_example
+package akka.stream_inside_actor
 
 import akka.NotUsed
 import akka.actor.typed.{ActorRef, Behavior}

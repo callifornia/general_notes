@@ -1,4 +1,5 @@
 package cats.effect
+
 import cats.effect._
 import cats.effect.implicits._
 
