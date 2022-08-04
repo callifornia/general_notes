@@ -1,1 +1,1 @@
-# general_tips
+# General collection for scala notes
