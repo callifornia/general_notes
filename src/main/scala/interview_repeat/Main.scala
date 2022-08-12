@@ -5,7 +5,12 @@ import akka.actor.typed.receptionist.Receptionist._
 import akka.actor.typed.receptionist.ServiceKey
 import akka.actor.typed.scaladsl.AskPattern._
 import akka.actor.typed.scaladsl.Behaviors
+import akka.cluster.sharding.typed.scaladsl.EntityTypeKey
+import akka.persistence.typed.PersistenceId
+import akka.persistence.typed.scaladsl.{Effect, EventSourcedBehavior}
 import akka.util.Timeout
+import cats.{FlatMap, Functor}
+import cats.implicits.{toFlatMapOps, toFunctorOps}
 
 import scala.concurrent.duration.DurationInt
 

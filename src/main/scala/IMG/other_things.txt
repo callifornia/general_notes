@@ -1,0 +1,3 @@
+activate user:
+  https://dde-test.imggaming.com/#/settings/users/create/e90dcf7e-6d75-4dfd-813d-0423b9ffdc5e
+

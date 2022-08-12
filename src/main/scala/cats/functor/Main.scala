@@ -21,16 +21,16 @@ object Main {
   }
 
   // implicit case class
-  extension [C[_], A, B](container: C[A])(using functor: CustomFunctor[C])
-    def map(function: A => B): C[B] = functor.map(container)(function)
+//  extension [C[_], A, B](container: C[A])(using functor: CustomFunctor[C])
+//    def map(function: A => B): C[B] = functor.map(container)(function)
 
   // specific implementation for `CustomFunctor[Tree]`
-  given treeFunctor: CustomFunctor[Tree] with
-    def map[A, B](container: Tree[A])(function: A => B): Tree[B] =
-      container match {
-        case Leaf(value) => Leaf(function(value))
-        case Branch(value, left, right) => Branch(function(value), map(left)(function), map(right)(function))
-      }
+//  given treeFunctor: CustomFunctor[Tree] with
+//    def map[A, B](container: Tree[A])(function: A => B): Tree[B] =
+//      container match {
+//        case Leaf(value) => Leaf(function(value))
+//        case Branch(value, left, right) => Branch(function(value), map(left)(function), map(right)(function))
+//      }
 
   // ############################################################################################################
 
@@ -64,7 +64,7 @@ object Main {
       right = Leaf(7))
 
 
-  @main def run(): Unit = {
-    println(tree.map(_ * 10))
+  def main(args: Array[String]): Unit = {
+//    println(tree.map(_ * 10))
   }
 }
